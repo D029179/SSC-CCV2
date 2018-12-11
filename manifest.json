@@ -3,90 +3,12 @@
     "extensions": [
         "modeltacceleratorservices",
         "electronicsstore",
-        "customerticketingaddon",
         "yacceleratorstorefront",
         "backoffice"
-    ], 
-    "useConfig": {
-        "properties": [
-            {
-                "location": "/config/local.properties"
-            },
-            {
-                "location": "/config/local-dev.properties",
-                "persona": "development"
-            },
-            {
-                "location": "/config/local-prod.properties",
-                "persona": "production"
-            },
-            {
-                "location": "/config/local-backoffice-prod.properties",
-                "persona": "production",
-                "aspect": "backoffice"
-            },
-            {
-                "location": "/config/local-backoffice.properties",
-                "aspect": "backoffice"
-            }
-        ],
-        "extensions": {
-            "location": "/config/localextensions.xml",
-            "exclude": [
-                "custom_2_extension_without_dir",
-                "custom_1_extension_with_dir"
-            ]
-        },
-        "solr": {
-            "location": "/config/solr"
-        },
-        "languages" : {
-            "location": "_LANGUAGES_"
-        },
-	    
-    "properties": [
-        {
-            "key": "test.property.1",
-            "value": "test.property.1.value",
-            "persona": "production"
-        },
-        {
-            "key": "test.property.2",
-            "value": "test.property.2.value",
-            "persona": "development"
-        },
-        {
-            "key": "test.property.2",
-            "value": "test.property.2.value.in.prod.only",
-            "persona": "production"
-        }
     ],
-    "storefrontAddons": [
-        {
-            "addon": "customerticketingaddon",
-            "storefront": "mycustomstorefront",
-            "template": "yacceleratorstorefront"
-        },
-        {
-            "addon": "smarteditaddon",
-            "storefront": "mycustomstorefront",
-            "template": "yacceleratorstorefront"
-        }
-    ],
-     "aspects": [
+         "aspects": [
         {
             "name": "backoffice",
-            "properties": [
-				{
-                    "key": "test.property.1",
-                    "value": "test.property-1-value-prod-backoffice",
-                    "persona": "production"
-                },
-                {
-                    "key": "test.property.2",
-                    "value": "test.property-2-value-backoffice"
-                }
-            ],
             "webapps": [
                 {
                     "name": "hac",
@@ -104,36 +26,14 @@
         },
         {
             "name": "accstorefront",
-            "properties": [
-                {
-                    "key": "spring.session.enabled",
-                    "value": "true"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.save",
-                    "value":"async"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.name",
-                    "value": "JSESSIONID"
-                },
-                {
-                    "key": "spring.session.yacceleratorstorefront.cookie.path",
-                    "value": "/"
-                },
-                {
-                    "key":"storefrontContextRoot",
-                    "value":""
-                }
-            ],
             "webapps": [
                 {
                     "name": "mediaweb",
                     "contextPath": "/medias"
                 },
                 {
-                    "name": "mycustomstorefront",
-                    "contextPath": ""
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
                 },
                 {
                     "name": "acceleratorservices",
@@ -155,16 +55,5 @@
                 }
             ]
         }
-    ],
-    "tests": {
-        "extensions": ["customerticketingaddon",
-        "yacceleratorstorefront"],
-        "annotations": ["UnitTests", "IntegrationTests"],
-        "packages": ["de.hybris.infra.*"]
-    },
-    "webTests": {
-        "extensions": ["yacceleratorstorefront"],
-        "excludedPackages": ["de.hybris.platform.*"]
-    }
-}
+    ]
 }
