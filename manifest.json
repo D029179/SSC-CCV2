@@ -43,6 +43,7 @@
         "languages" : {
             "location": "_LANGUAGES_"
         }
+	    
     "properties": [
         {
             "key": "test.property.1",
