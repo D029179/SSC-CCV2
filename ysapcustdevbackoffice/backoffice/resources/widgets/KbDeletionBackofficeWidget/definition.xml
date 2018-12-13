@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2018 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<!--<widget-definition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widget-definition.xsd"
+	id="com.sap.projects.widgets.kbDeletionBackofficewidget">
+	<name>kbDeletionBackoffice Sample Widget</name>
+	<description>kbDeletionBackoffice Sample Widget</description>
+	<defaultTitle>kbDeletionBackoffice Sample Widget</defaultTitle>
+	<author>Extgen</author>
+	<version>1.0</version>
+	<view src="kbDeletionBackofficewidget.zul" />
+	<keywords>
+		<keyword>kbDeletionBackoffice</keyword>
+	</keywords>
+	<controller class="com.sap.projects.widgets.KbDeletionBackofficeController" />
+</widget-definition>-->
+
+<action-definition id="de.hybris.platform.sap.kbDeletionBackoffice.actions.KbDeletionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/action-definition.xsd">
+ 
+    <name>KB Deletion</name>
+    <description>KB deletion</description>
+    <author>hybris</author>
+    <version>0.1</version> 
+ 
+    <actionClassName>de.hybris.platform.sap.kbDeletionBackoffice.actions.KbDeletionAction</actionClassName>
+ 
+    <inputType>de.hybris.platform.sap.core.configuration.jalo.SAPConfiguration</inputType>
+    <outputType>java.lang.String</outputType>
+ 	<iconUri>images/std_default.png</iconUri>    
+    <iconHoverUri>images/std_active.png</iconHoverUri>
+    <iconDisabledUri>images/std_disabled.png</iconDisabledUri>
+    <settings>
+        <setting key="viewMode" default-value="iconAndText"/>
+    </settings>
+</action-definition>

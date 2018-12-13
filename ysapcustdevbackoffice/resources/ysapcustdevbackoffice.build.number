@@ -1,0 +1,9 @@
+#Ant properties
+#Tue May 08 01:20:37 CEST 2018
+builddate=20180808 1500
+description=ysapcustdevbackoffice
+name=ysapcustdevbackoffice
+releasedate=20180808 1500
+vendor=hybris
+version=18.08.0
+version.api=18.08
