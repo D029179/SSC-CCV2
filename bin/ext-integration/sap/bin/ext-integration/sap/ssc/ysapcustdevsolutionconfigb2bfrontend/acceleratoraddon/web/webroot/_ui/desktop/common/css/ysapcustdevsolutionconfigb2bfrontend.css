@@ -1,0 +1,13 @@
+.additional_button {
+        margin-left:3px;
+}
+
+.submitRemoveSolutionProduct, .updateSolutionQuantityProduct{
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.solution-config-find-related-product{
+	margin-top:75px;
+}
