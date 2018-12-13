@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2013 hybris AG
+ All rights reserved.
+
+ This software is the confidential and proprietary information of hybris
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with hybris.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<alias alias="sapOrdermgmtWriteStrategy" name="sapcustdevOrdermgmtDefaultWriteStrategy" />
+	<bean id="sapcustdevOrdermgmtDefaultWriteStrategy" parent="sapOrdermgmtDefaultWriteStrategy" scope="prototype"
+		class="com.sap.projects.custdev.fbs.slc.order.backend.impl.erp.strategy.SetStrategyERPCustDev">
+		<property name="messageMapper" ref="sapOrdermgmtBackendMessageMapper" />
+		<property name="custExit" ref="sapOrdermgmtERPCustExit" />
+		<property name="genericFactory" ref="sapCoreGenericFactory" />
+	</bean>
+
+	<alias alias="sapOrdermgmtProductConfigurationStrategy" name="sapcustdevOrdermgmtDefaultSolutionConfigurationStrategy" />
+	<bean id="sapcustdevOrdermgmtDefaultSolutionConfigurationStrategy" parent="sapOrdermgmtDefaultProductConfigurationStrategy" scope="prototype"
+		class="com.sap.projects.custdev.fbs.slc.order.backend.impl.erp.strategy.SolutionConfigurationStrategyImpl">
+		<property name="messageMapper" ref="sapOrdermgmtBackendMessageMapper" />		
+	</bean>
+	
+	<alias alias="sapOrdermgmtHeaderMapper" name="sapcustdevOrdermgmtDefaultHeaderMapper" />
+	<bean id="sapcustdevOrdermgmtDefaultHeaderMapper" parent="sapOrdermgmtDefaultHeaderMapper" scope="prototype"
+		class="com.sap.projects.custdev.fbs.slc.order.backend.impl.erp.strategy.HeaderMapperCustDev">
+		<property name="genericFactory" ref="sapCoreGenericFactory" />
+		<property name="converter" ref="sapCommonConverter"></property>
+		<property name="commonI18NService" ref="commonI18NService" />		
+	</bean>	
+	
+	<alias alias="sapOrdermgmtItemMapper" name="sapcustdevOrdermgmtDefaultItemMapper" />
+	<bean id="sapcustdevOrdermgmtDefaultItemMapper" parent="sapOrdermgmtDefaultItemMapper" scope="prototype"
+		class="com.sap.projects.custdev.fbs.slc.order.backend.impl.erp.strategy.ItemMapperCustDev">
+		<property name="genericFactory" ref="sapCoreGenericFactory" />
+		<property name="custExit" ref="sapOrdermgmtERPCustExit" />
+		<property name="converter" ref="sapCommonConverter"></property>
+	</bean>
+	
+	<alias alias="sapOrdermgmtActionsStrategy" name="sapcustdevOrdermgmtDefaultActionsStrategy" />
+	<bean id="sapcustdevOrdermgmtDefaultActionsStrategy" parent= "sapOrdermgmtDefaultActionsStrategy" scope="prototype"
+		class="com.sap.projects.custdev.fbs.slc.order.backend.impl.erp.strategy.LrdActionsStrategyERPCustDev">
+		<property name="messageMapper" ref="sapOrdermgmtBackendMessageMapper" />
+		<property name="custExit" ref="sapOrdermgmtERPCustExit" />
+		<property name="genericFactory" ref="sapCoreGenericFactory" />
+		<property name="moduleConfigurationAccess" ref="sapOrdermgmtConfigurationAccess" />		
+	</bean>
+		
+			
+</beans>
