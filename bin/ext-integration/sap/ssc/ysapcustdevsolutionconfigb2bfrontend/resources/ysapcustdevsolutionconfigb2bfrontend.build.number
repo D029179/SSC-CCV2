@@ -1,0 +1,11 @@
+#Ant properties
+#Wed Mar 21 11:38:03 CEST 2017
+builddate=20180808 1500
+releasedate=20180808 1500
+vendor=hybris
+vender_version=18.08.0
+version_ui_extn_=18.08.0
+ui_extn_support_package=SP00
+ui_extn_patch_level=0
+description=ysapcustdevsolutionconfigb2bfrontend
+name=ysapcustdevsolutionconfigb2bfrontend

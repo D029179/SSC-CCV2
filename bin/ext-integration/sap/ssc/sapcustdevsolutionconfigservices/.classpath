@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/platform"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/sapproductconfigruntimessc"/>
+	<classpathentry exported="true" kind="lib" path="resources"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="src"/>
+	<classpathentry kind="src" output="eclipsebin/web/classes" path="web/src"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="gensrc"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/sapproductconfigruntimeinterface"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/sapproductconfigservices"/>
+	<classpathentry kind="lib" path="C:/h5.5.1.5/hybris/bin/ext-integration/sap/productconfig/sapproductconfigruntimessc/lib/com.sap.custdev.projects.fbs.slc.common-2.4.0-20160128.035912-302.jar"/>
+	<classpathentry kind="lib" path="C:/h5.5.1.5/hybris/bin/ext-integration/sap/productconfig/sapproductconfigruntimessc/lib/com.sap.custdev.projects.fbs.slc.database-2.4.0-20160128.035930-301.jar"/>
+	<classpathentry kind="lib" path="C:/h5.5.1.5/hybris/bin/ext-integration/sap/productconfig/sapproductconfigruntimessc/lib/com.sap.custdev.projects.fbs.slc.engine-2.4.0-20160128.040120-293.jar"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+</classpath>

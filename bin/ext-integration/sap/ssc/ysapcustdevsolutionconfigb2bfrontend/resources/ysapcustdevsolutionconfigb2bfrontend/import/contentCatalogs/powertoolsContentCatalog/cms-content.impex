@@ -1,0 +1,108 @@
+#
+# Import the CMS content for the powertools site
+#
+#$contentCatalog=powertoolsContentCatalog
+#$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$contentCatalog=powertoolsContentCatalog
+$productCatalog=powertoolsProductCatalog
+$contentCV=catalogVersion(catalog(id[default=$contentCatalog]),version[default='Staged'])
+$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])
+$jarResource=jar:de.hybris.platform.yacceleratorcore.setup.CoreSystemSetup&/ysapproductconfigb2baddon/import/cockpits/cmscockpit
+
+# Import modulegen config properties into impex macros
+UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor];pk[unique=true]
+$jarResourceCms=$config-jarResourceCmsValue
+
+### REMOVE ALL Before ##
+#REMOVE ComponentTypeGroup;code[unique=true]
+#;solutionconfiguration
+
+# CMS SolutionConfiguration Components
+#REMOVE FindProductForSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#;;FindProductForSolutionComponent;Find Product For Solution Component;FindProductForSolutionComponent
+
+# CMS SolutionConfiguration Components
+#REMOVE AddProductToSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#;;AddProductToSolutionComponent;Add Product To Solution Component;AddProductToSolutionComponent
+
+# CMS SolutionConfiguration Components
+#REMOVE ListProductsOfSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#;;ListProductsOfSolutionComponent;List Products of Solution Component;ListProductsOfSolutionComponent
+
+# Add component type to group
+#REMOVE ComponentTypeGroups2ComponentType;source(code)[unique=true];target(code)[unique=true]
+#;solutionconfiguration;FindProductForSolutionComponent
+#;solutionconfiguration;AddProductToSolutionComponent
+#;solutionconfiguration;ListProductsOfSolutionComponent
+
+# assign content slots to page template
+#REMOVE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='ProductConfigurationTemplate'];validComponentTypes(code);compTypeGroup(code)
+#;ConfigHeader;;ProductConfigurationImageComponent,FindProductForSolutionComponent;wide
+#;ConfigContent;;ProductConfigurationFormComponent,ListProductsOfSolutionComponent;narrow
+
+# Bind Component to Slot
+#REMOVE ElementsForSlot;source($contentCV,uid)[unique=true];target(&componentRef)[unique=true];
+#;ConfigHeaderSlot;FindProductForSolutionComponent
+#;AddToCartSlot;AddProductToSolutionComponent
+#;ConfigContentSlot;ListProductsOfSolutionComponent
+
+# define page template
+#REMOVE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+#;;ProductListPageTemplate;Product List Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/product/productListPage;CategoryPage
+#;;SearchResultsListPageTemplate;Search Results List Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/search/searchListPage;ContentPage
+#;;SearchAdvancedResultsEmptyPageTemplate;Advanced Search Results Empty Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/search/searchAdvancedEmptyPage;ContentPage
+
+##### END REMOVE ###
+
+INSERT_UPDATE ComponentTypeGroup;code[unique=true]
+;solutionconfiguration
+
+# CMS SolutionConfiguration Components
+INSERT_UPDATE FindProductForSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;FindProductForSolutionComponent;Find Product For Solution Component;FindProductForSolutionComponent
+
+# CMS SolutionConfiguration Components
+INSERT_UPDATE AddProductToSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;AddProductToSolutionComponent;Add Product To Solution Component;AddProductToSolutionComponent
+
+# CMS SolutionConfiguration Components
+INSERT_UPDATE ListProductsOfSolutionComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;ListProductsOfSolutionComponent;List Products of Solution Component;ListProductsOfSolutionComponent
+
+INSERT_UPDATE ProductConfigurationMenuComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;restrictions(uid,$contentCV)
+;;ProductConfigurationMenu;Product Configuration Menu;ProductConfigurationMenu;
+
+# Add component type to group
+INSERT_UPDATE ComponentTypeGroups2ComponentType;source(code)[unique=true];target(code)[unique=true]
+;solutionconfiguration;FindProductForSolutionComponent
+;solutionconfiguration;AddProductToSolutionComponent
+;solutionconfiguration;ListProductsOfSolutionComponent
+#;solutionconfiguration;SolutionConfigurationMenuComponent
+
+# assign content slots to page template
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='ProductConfigurationTemplate'];validComponentTypes(code);compTypeGroup(code)
+;ConfigHeader;;ProductConfigurationImageComponent,FindProductForSolutionComponent;wide
+;ConfigContent;;ProductConfigurationFormComponent,ListProductsOfSolutionComponent;narrow
+
+# Bind Component to Slot
+INSERT_UPDATE ElementsForSlot;source($contentCV,uid)[unique=true];target(&componentRef)[unique=true];
+;ConfigHeaderSlot;FindProductForSolutionComponent
+;AddToCartSlot;AddProductToSolutionComponent
+;ConfigContentSlot;ListProductsOfSolutionComponent
+;ConfigContentSlot;ListProductsOfSolutionComponent
+
+# Remove solution configuration menu component
+REMOVE SolutionConfigurationMenuComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;SolutionConfigurationMenuComponent;Solution configuration menu component;SolutionConfigurationMenuComponent
+
+
+
+################################################
+### Page Type / Page Template Definition     ###
+################################################
+
+# define page template
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;ProductListPageTemplate;Product List Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/product/productListPage;CategoryPage
+;;SearchResultsListPageTemplate;Search Results List Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/search/searchListPage;ContentPage
+;;SearchAdvancedResultsEmptyPageTemplate;Advanced Search Results Empty Page Template;addon:/ysapcustdevsolutionconfigb2bfrontend/pages/search/searchAdvancedEmptyPage;ContentPage
