@@ -1,4 +1,0 @@
-INSERT_UPDATE CacheUpdateJob;code[unique=true];job(code);active;sessionLanguage(isoCode)[default=en];
-;kbCacheUpdateCronJob;cacheUpdateJobPerformable;true;en;
-INSERT_UPDATE Trigger;cronJob(code)[unique=true];cronExpression
-;kbCacheUpdateCronJob;0 0/59 * * * ?
