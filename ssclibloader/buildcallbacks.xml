@@ -87,17 +87,23 @@
  
 --><project name="ssclibloader_buildcallbacks">
 
-	<!-- 
-	    Called whenever 'ant ear' is used. this callback can be used to modify the content of the ear file
-	
-	     ${ear.path}: 			path to ear
-	 -->
-	<macrodef name="ssclibloader_before_ear">
+	<macrodef name="ssclibloader_only_once_prepare">
 		<sequential>
-
-			<!-- you can do anything before the EAR file is being packed -->
-
+			<echo message="ssclibloader_move_libs"/>
+			<copy todir="${ext.sapproductconfigruntimessc.path}/lib">
+				<fileset dir="${ext.ssclibloader.path}/lib" includes="**"/>
+			</copy>
 		</sequential>
 	</macrodef>
+
+	<patternset id="extension.ssclibloader.binary.filter">
+		<patternset refid="extension.binary.filter" />
+		<exclude name="lib\*.jar" />
+	</patternset>
+
+	<patternset id="extension.ssclibloader.source.filter">
+		<patternset refid="extension.source.filter" />
+		<exclude name="lib\*.jar" />
+	</patternset>
 
 </project>
