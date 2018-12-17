@@ -53,6 +53,7 @@
         "secureportaladdon",
         "solrfacetsearchbackoffice",
         "solrserver",
+        "ssclibloader",
         "yacceleratorcockpits",
         "yacceleratorfulfilmentprocess",
         "yacceleratorinitialdata",
