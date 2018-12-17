@@ -18,8 +18,6 @@
       
 
       <coremodule generated="true" manager="com.hybris.ssclibloader.jalo.SsclibloaderManager" packageroot="com.hybris.ssclibloader"/>
-
-      <webmodule jspcompile="false" webroot="/ssclibloader"/>
 					
 	
 
