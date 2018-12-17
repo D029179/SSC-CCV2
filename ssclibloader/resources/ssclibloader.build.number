@@ -1,0 +1,9 @@
+#Ant properties
+#Mon Jul 09 14:06:15 CEST 2018
+builddate=20180709 1406
+description=ssclibloader
+name=ssclibloader
+releasedate=20180313 1012
+vendor=hybris
+version=6.7.0.3
+version.api=6.7.0
