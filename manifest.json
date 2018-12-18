@@ -65,6 +65,7 @@
         "ysapordermgmtb2baddon",
         "ysapproductconfigaddon"
     ],
+
     
     "storefrontAddons": [
     { "addon": "sapcoreaddon",
