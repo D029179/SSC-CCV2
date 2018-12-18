@@ -96,7 +96,7 @@
       "storefront": "yb2bacceleratorstorefront",
       "template": "yacceleratorstorefront"
     },                  
-         "aspects": [
+   "aspects": [
         {
             "name": "backoffice",
             "webapps": [
