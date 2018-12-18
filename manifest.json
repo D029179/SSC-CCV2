@@ -65,7 +65,10 @@
         "ysapordermgmtb2baddon",
         "ysapproductconfigaddon"
     ],
-  
+    
+    "storeFrontExtension": "yb2bacceleratorstorefront",
+    "storeFrontWebRoot": "/yb2bacceleratorstorefront",  
+    
     "storefrontAddons": [
         {
         "addon": "sapcoreaddon",
