@@ -63,7 +63,8 @@
         "ysapcustdevsolutionconfigb2bfrontend",
         "ysaporderfulfillment",
         "ysapordermgmtb2baddon",
-        "ysapproductconfigaddon"
+        "ysapproductconfigaddon",
+        "ssclibloader"
     ],
     
     "storeFrontExtension": "yb2bacceleratorstorefront",
