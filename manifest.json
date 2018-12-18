@@ -95,7 +95,7 @@
     { "addon": "ysapcustdevsolutionconfigb2bfrontend",
       "storefront": "yb2bacceleratorstorefront",
       "template": "yacceleratorstorefront"
-    },                  
+    }                  
    "aspects": [
         {
             "name": "backoffice",
