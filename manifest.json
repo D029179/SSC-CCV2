@@ -65,37 +65,44 @@
         "ysapordermgmtb2baddon",
         "ysapproductconfigaddon"
     ],
-
-    
+  
     "storefrontAddons": [
-    { "addon": "sapcoreaddon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },    
-    { "addon": "b2bacceleratoraddon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },
-    { "addon": "commerceorgaddon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },    
-    { "addon": "ysapordermgmtb2baddon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },     
-    { "addon": "secureportaladdon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },    
-    { "addon": "ysapproductconfigaddon",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    },
-    { "addon": "ysapcustdevsolutionconfigb2bfrontend",
-      "storefront": "yb2bacceleratorstorefront",
-      "template": "yacceleratorstorefront"
-    }                  
+        {
+        "addon": "sapcoreaddon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },    
+        { 
+        "addon": "b2bacceleratoraddon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },
+        { 
+        "addon": "commerceorgaddon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },    
+        { 
+        "addon": "ysapordermgmtb2baddon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },     
+        { 
+        "addon": "secureportaladdon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },    
+        { 
+        "addon": "ysapproductconfigaddon",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        },
+        { 
+        "addon": "ysapcustdevsolutionconfigb2bfrontend",
+        "storefront": "yb2bacceleratorstorefront",
+        "template": "yacceleratorstorefront"
+        }    
+    ],
    "aspects": [
         {
             "name": "backoffice",
