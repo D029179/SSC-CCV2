@@ -134,13 +134,20 @@
                 }
             ],
             "webapps": [
-                {   "name": "mediaweb",
+                {
+                    "name": "hac",
+                    "contextPath": "/hac"
+                },
+                {
+                    "name": "mediaweb",
                     "contextPath": "/medias"
                 },
-                {   "name": "yacceleratorstorefront",
-                    "contextPath": "/yacceleratorstorefront"
+                {
+                    "name": "yb2bacceleratorstorefront",
+                    "contextPath": "/yb2bacceleratorstorefront"
                 },
-                {   "name": "acceleratorservices",
+                {
+                    "name": "acceleratorservices",
                     "contextPath": "/acceleratorservices"
                 }
             ]
