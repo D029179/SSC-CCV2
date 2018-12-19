@@ -64,11 +64,7 @@
         "ysapordermgmtb2baddon",
         "ysapproductconfigaddon",
         "ssclibloader"
-    ],
-    
-    "storeFrontExtension": "yb2bacceleratorstorefront",
-    "storeFrontWebRoot": "/yb2bacceleratorstorefront",  
-    
+    ],  
     "storefrontAddons": [
         {   "addon": "sapcoreaddon",
             "storefront": "yb2bacceleratorstorefront",
@@ -99,6 +95,11 @@
             "template": "yacceleratorstorefront"
         }    
     ],
+    "properties": [
+        {   "key": "yb2bacceleratorstorefront.webroot",
+            "value": "/yb2bacceleratorstorefront"
+        }
+    ],    
    "aspects": [
         {   "name": "backoffice",
             "webapps": [
