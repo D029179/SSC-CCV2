@@ -70,87 +70,69 @@
     "storeFrontWebRoot": "/yb2bacceleratorstorefront",  
     
     "storefrontAddons": [
-        {
-        "addon": "sapcoreaddon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "sapcoreaddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },    
-        { 
-        "addon": "b2bacceleratoraddon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "b2bacceleratoraddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },
-        { 
-        "addon": "commerceorgaddon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "commerceorgaddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },    
-        { 
-        "addon": "ysapordermgmtb2baddon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "ysapordermgmtb2baddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },     
-        { 
-        "addon": "secureportaladdon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "secureportaladdon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },    
-        { 
-        "addon": "ysapproductconfigaddon",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "ysapproductconfigaddon",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         },
-        { 
-        "addon": "ysapcustdevsolutionconfigb2bfrontend",
-        "storefront": "yb2bacceleratorstorefront",
-        "template": "yacceleratorstorefront"
+        {   "addon": "ysapcustdevsolutionconfigb2bfrontend",
+            "storefront": "yb2bacceleratorstorefront",
+            "template": "yacceleratorstorefront"
         }    
     ],
    "aspects": [
-        {
-            "name": "backoffice",
+        {   "name": "backoffice",
             "webapps": [
-                {
-                    "name": "hac",
-                    "contextPath": "/hac"
+                {   "name": "hac",
+                    "contextPath": "/hac" 
                 },
-                {
-                    "name": "mediaweb",
+                {  "name": "mediaweb",
                     "contextPath": "/medias"
                 },
-                {
-                    "name": "backoffice",
-                    "contextPath": ""
+                {  "name": "backoffice",
+                   "contextPath": ""
                 }
             ]
         },
-        {
-            "name": "accstorefront",
+        {   "name": "accstorefront",
             "webapps": [
-                {
-                    "name": "mediaweb",
+                {   "name": "mediaweb",
                     "contextPath": "/medias"
                 },
-                {
-                    "name": "yacceleratorstorefront",
+                {   "name": "yacceleratorstorefront",
                     "contextPath": "/yacceleratorstorefront"
                 },
-                {
-                    "name": "acceleratorservices",
+                {   "name": "acceleratorservices",
                     "contextPath": "/acceleratorservices"
                 }
             ]
         },
-        {
-            "name": "backgroundProcessing",
+        {   "name": "backgroundProcessing",
             "properties": [],
             "webapps": [
-                {
-                    "name": "hac",
+                {   "name": "hac",
                     "contextPath": ""
                 },
-                {
-                    "name": "mediaweb",
+                {   "name": "mediaweb",
                     "contextPath": "/medias"
                 }
             ]
