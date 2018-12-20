@@ -120,6 +120,9 @@
                     "key": "spring.session.enabled",
                     "value": "true"
                 },
+                {   "key": "storefrontContextRoot",
+                    "value": ""
+                },
                 {
                     "key": "spring.session.yb2bacceleratorstorefront.save",
                     "value":"async"
