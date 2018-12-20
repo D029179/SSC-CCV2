@@ -110,7 +110,7 @@
                     "contextPath": "/medias"
                 },
                 {  "name": "backoffice",
-                   "contextPath": ""
+                   "contextPath": "/backoffice"
                 }
             ]
         },
