@@ -146,6 +146,10 @@
                     "contextPath": "/yb2bacceleratorstorefront"
                 },
                 {
+                    "name": "yacceleratorstorefront",
+                    "contextPath": "/yacceleratorstorefront"
+                },                
+                {
                     "name": "acceleratorservices",
                     "contextPath": "/acceleratorservices"
                 }
